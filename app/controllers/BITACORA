@@ -1,0 +1,14 @@
+principal 
+	-login
+		-ver resultados
+		-ver informacion
+		-hacer encuesta
+			-encuenta academicos
+				-elejir docente
+				-
+			-encuesta centro de alumnos
+		
+	-activar cuenta
+		-habilito mi cuenta con rut
+		-creo pass para logearme
+	
