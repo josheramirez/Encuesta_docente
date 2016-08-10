@@ -13,7 +13,6 @@ test:
   database: app_name_test
 
 staging:
-  
   url: <%= ENV['DATABASE_URL'] %>
 
 production:
