@@ -52,3 +52,7 @@ gem 'pg'
 gem 'rails_12factor'
 gem 'puma','2.11.1'
 end
+
+group :assets do
+  gem 'jquery-ui-rails', :git => 'https://github.com/joliss/jquery-ui-rails'
+end
