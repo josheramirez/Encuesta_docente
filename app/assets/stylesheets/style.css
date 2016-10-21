@@ -1,0 +1,15 @@
+.jumbotron{margin-top: -21px;}
+.jumbotron h3{color: inherit}
+.jumbotron .panel{color: black;}
+.infoencuesta{padding-bottom: 55px;}
+.infoencuesta>.container>.row{padding: 20px;}
+#footer {
+    background-color: #0191C8;
+    border-top: 1px solid #39a8d3;
+    color: #95cfe5;
+    text-shadow: 0 1px 0 rgba(0,0,0,0.15);
+    margin-top: 0px;
+}
+.footer>.container{padding: 20px;}
+.text-default{color:inherit;}
+.row.vdivide [class*=col-]:not(:last-child):after{background:#e0e0e0;width:1px;content:"";display:block;position:absolute;top:0;bottom:0;right:0;min-height:70px}

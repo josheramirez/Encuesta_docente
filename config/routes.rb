@@ -3,12 +3,14 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
+  
  root 'encuestas#home'
 
   get     'resultados'    => 'encuestas#resultados'
   get     'informacion'   => 'encuestas#informacion'
   get     'encuesta'      => 'encuestas#new'
   get     'envio'         => 'encuestas#envio'
+
 
 resources :profesors
 
