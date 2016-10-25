@@ -11,16 +11,35 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160807183107) do
-
-  # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
+ActiveRecord::Schema.define(version: 20161025004625) do
 
   create_table "profesors", force: :cascade do |t|
     t.string   "nombre"
     t.string   "email"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "ramos", force: :cascade do |t|
+    t.string   "nombre"
+    t.integer  "seccion"
+    t.integer  "semestre"
+    t.integer  "año"
+    t.integer  "profesor_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  add_index "ramos", ["profesor_id"], name: "index_ramos_on_profesor_id"
+
+  create_table "users", force: :cascade do |t|
+    t.string   "name"
+    t.string   "email"
+    t.integer  "rut"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+    t.boolean  "activated"
+    t.string   "password_digest"
   end
 
 end

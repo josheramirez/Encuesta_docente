@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  get 'sessions/new'
+
+  get 'sessions/create'
+
+  get 'sessions/destroy'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -10,9 +16,15 @@ Rails.application.routes.draw do
   get     'informacion'   => 'encuestas#informacion'
   get     'encuesta'      => 'encuestas#new'
   get     'envio'         => 'encuestas#envio'
+  get     'activar'         => 'users#index'
+  get     'sesion'         => 'users#sesion'
+  get     'buscar'         => 'users#buscar'
+  get     'login'         => 'sessions#new'
+  post    'login'   => 'sessions#create' 
 
 
 resources :profesors
+resources :users
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

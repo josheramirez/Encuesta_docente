@@ -1,0 +1,24 @@
+<%= form_for @micropost do |f| %>
+
+
+<%= render 'shared/error_messages', object: f.object %>
+<div class="field" >
+	<%= f.label "Producto" %>
+	<%= f.text_field :content,class: 'form-control' ,placeholder: "Titulo nueva venta..." %>
+	<%= f.label "Precio" %>
+	<%= f.text_field :precio, class: 'form-control' ,placeholder: "De venta pesos por kilo..."%>
+	<%= f.label "Cantidad" %>
+	<%= f.text_field :cantidad, class: 'form-control',placeholder: "Kilos disponibles en venta..." %>
+	<%= f.label "Volumen" %>
+	<%= f.text_field :mt3,class: 'form-control',placeholder: "Metros cubicos por kilo de producto..." %>
+	<%= f.label "Timpo de llegada" %>
+	<%= f.text_field :hrs, class: 'form-control',placeholder: "En horas desde el proveedor a nuestra bodega..."%>
+	<%= f.text_field :tipo, value:"publico", type:"hidden" %>
+	<%= #f.text_field :id_micropost, value:@micropost1.id, type:"hidden" 
+	%>
+
+</div>
+<%= f.submit "Publicar Venta", class: "btn btn-primary" %>
+
+
+<% end %>
